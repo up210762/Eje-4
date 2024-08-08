@@ -1,6 +1,7 @@
 import { getToken } from '../services/localStorage';
+import { API_URL } from './keys';
 
-const BASE_URL = new URL("http://localhost:3000/api/");
+const BASE_URL = new URL(`${API_URL}/api/`);
 
 export const login = async (user: UserLogin): Promise<HttpResponse> => {
     const LOGIN_URL = new URL('login', BASE_URL)

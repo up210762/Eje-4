@@ -1,7 +1,8 @@
 import { UserUpdate } from '../components/ModalUserUpdate';
+import { API_URL } from './keys';
 import { getToken } from './localStorage';
 
-const BASE_URL = new URL('http://localhost:3000/api/');
+const BASE_URL = new URL(`${API_URL}/api/`);
 
 export const getOneUser = async () => {
     const USER_URL = new URL(`user`, BASE_URL);

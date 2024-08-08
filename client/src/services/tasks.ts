@@ -1,8 +1,9 @@
 import { TaskInsert } from '../components/ModalInsert';
 import { TaskUpdate } from '../components/ModalUpdate';
+import { API_URL } from './keys';
 import { getToken } from './localStorage';
 
-const BASE_URL = new URL('http://localhost:3000/api/');
+const BASE_URL = new URL(`${API_URL}/api/`);
 
 export const getAllTasks = async (): Promise<Task[]> => {
   const TASK_URL = new URL('task', BASE_URL);
